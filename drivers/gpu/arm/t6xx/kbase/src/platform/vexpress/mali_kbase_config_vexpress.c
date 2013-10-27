@@ -371,7 +371,14 @@ kbase_attribute config_attributes_hw_issue_8408[] = {
 	 0}
 };
 
-kbase_platform_config platform_config = {
+kbase_platform_config versatile_platform_config = {
 	.attributes = config_attributes,
 	.io_resources = &io_resources
 };
+
+kbase_platform_config *kbase_get_platform_config(void)
+{
+	return &versatile_platform_config;
+}
+
+
